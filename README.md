@@ -12,12 +12,18 @@ Use the architecture document for the component diagram, implementation boundari
 | Component | Responsibility |
 | --- | --- |
 | [`src/autocloud/main.py`](src/autocloud/main.py) | HTTP handlers: `GET /healthz`, `POST /agent/run` |
+| [`src/autocloud/ops.py`](src/autocloud/ops.py) | HTTP handlers: `GET /readyz`, `POST /workspaces`, `GET /workspaces`, `POST /workspaces/{workspace_id}/jobs`, `GET /jobs/{job_id}` |
 | [`src/autocloud/agent.py`](src/autocloud/agent.py) | Functions: `run` |
 | [`requirements.txt`](requirements.txt) | Implementation or supporting configuration |
 | [`src/autocloud/__init__.py`](src/autocloud/__init__.py) | Implementation or supporting configuration |
+| [`Dockerfile`](Dockerfile) | Container build/service configuration |
+| [`Makefile`](Makefile) | Implementation or supporting configuration |
+| [`docker-compose.yml`](docker-compose.yml) | Container build/service configuration |
 | [`tests/test_agent.py`](tests/test_agent.py) | Executable checks and regression examples |
+| [`tests/test_ops.py`](tests/test_ops.py) | Executable checks and regression examples |
 | [`.github/workflows/ci.yml`](.github/workflows/ci.yml) | GitHub Actions job definitions |
 | [`README.md`](README.md) | Project explanations or operating notes |
+| [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) | Project explanations or operating notes |
 
 ### Local setup and verification
 
