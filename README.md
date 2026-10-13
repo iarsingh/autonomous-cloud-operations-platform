@@ -1,5 +1,12 @@
 # Autonomous Cloud Operations Platform
 
+## Overview
+
+A capstone lab for a cloud operations agent that follows an observe, decide and plan loop. `POST /agent/run` returns a plan, but there is no autonomous apply: the agent stops before acting. A versioned ops API under `/v1` adds workspaces, tenant isolation, job approval and audit records, and the service is packaged with Docker and Docker Compose with pytest tests in GitHub Actions.
+
+- **Built with:** Python, pytest, Docker, GitHub Actions
+- **Scope:** Local laptop lab; it calls no hosted model and does not apply production changes.
+
 <!-- project-guide:start -->
 ## Project guide
 
